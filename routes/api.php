@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "API" middleware group. Enjoy building your API!
 |
 */
-if (Config::get('fintech.skeleton.enabled')) {
-    Route::prefix('skeleton')->name('skeleton.')->group(function () {
+if (Config::get('fintech.admin.enabled')) {
+    Route::prefix('admin')->name('admin.')->group(function () {
 
         //DO NOT REMOVE THIS LINE//
     });
