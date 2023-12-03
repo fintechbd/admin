@@ -2,9 +2,9 @@
 
 namespace Fintech\Admin;
 
-use Illuminate\Support\ServiceProvider;
-use Fintech\Admin\Commands\InstallCommand;
 use Fintech\Admin\Commands\AdminCommand;
+use Fintech\Admin\Commands\InstallCommand;
+use Illuminate\Support\ServiceProvider;
 
 class AdminServiceProvider extends ServiceProvider
 {
