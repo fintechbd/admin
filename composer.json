@@ -17,10 +17,12 @@
     ],
     "require": {
         "php": "^8.1",
-        "fintech/core": "*",
         "fintech/auth": "*",
+        "fintech/core": "*",
         "illuminate/contracts": "^10.0",
-        "owen-it/laravel-auditing": "^13.5"
+        "inertiajs/inertia-laravel": "*",
+        "owen-it/laravel-auditing": "^13.5",
+        "tightenco/ziggy": "^1.8"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
