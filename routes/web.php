@@ -17,5 +17,6 @@ if (Config::get('fintech.admin.enabled')) {
     Route::prefix('admin')->name('admin.')->group(function () {
 
         //DO NOT REMOVE THIS LINE//
+        Route::get('{any}', fn () => view('admin::app.app'));
     });
 }
