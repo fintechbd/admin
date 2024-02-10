@@ -8,7 +8,7 @@
     <meta name="app-name" content="{{ config('app.name') }}">
 
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
-    <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css', 'vendor/admin') }}">
 
     <script src="{{ mix('js/main.js', 'vendor/admin') }}"></script>
 
@@ -22,9 +22,6 @@
         Please enable it to continue.
     </h1>
 </noscript>
-
 @inertia
-
-
 </body>
 </html>
