@@ -20,14 +20,14 @@
         "fintech/auth": "*",
         "fintech/core": "*",
         "illuminate/contracts": "^10.0",
-        "inertiajs/inertia-laravel": "*",
+        "inertiajs/inertia-laravel": "^0.6.11",
         "owen-it/laravel-auditing": "^13.5",
         "tightenco/ziggy": "^1.8"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.9",
-        "nunomaduro/larastan": "^2.0.1",
+        "larastan/larastan": "^2.0.1",
         "orchestra/testbench": "^8.0",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-arch": "^2.0",
