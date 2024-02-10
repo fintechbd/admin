@@ -1,0 +1,29 @@
+name: Build Assets
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Compile the JS Files
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Compile Production Assets
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+      - run: npm install --force
+      - run: npm run build
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          push_options: '--force'
+          commit_message: "Compile and build asset for production"
