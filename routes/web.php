@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 if (Config::get('fintech.admin.enabled')) {
+
     Route::prefix('admin')->name('admin.')->group(function () {
+        Route::get('{uri?}', AdminController::class)->name('app')->where(['uri' => '(.*)']);
 
         //DO NOT REMOVE THIS LINE//
-        Route::get('{any}', fn () => view('admin::app.app'));
     });
 }
