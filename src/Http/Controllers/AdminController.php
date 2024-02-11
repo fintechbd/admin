@@ -12,6 +12,6 @@ class AdminController extends Controller
      */
     public function __invoke(Request $request, string $uri = '')
     {
-        return view("admin::app", compact('request', 'uri'));
+        return view('admin::app', compact('request', 'uri'));
     }
 }
