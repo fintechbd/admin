@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 if (Config::get('fintech.admin.enabled')) {
-    Route::prefix('admin')->name('admin.')->group(function () {
+    Route::prefix('admin')->name('admin.')
+        ->middleware(config('fintech.auth.middleware'))
+        ->group(function () {
 
         //DO NOT REMOVE THIS LINE//
     });
