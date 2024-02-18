@@ -18,9 +18,6 @@ class AdminServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/admin.php', 'fintech.admin'
         );
-
-        $this->app->register(RouteServiceProvider::class);
-        $this->app->register(RepositoryServiceProvider::class);
     }
 
     /**
