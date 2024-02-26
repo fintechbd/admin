@@ -271,15 +271,16 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
-    import { VFNumber } from 'vue-animation-counter';
+import {ref} from 'vue';
+import {VFNumber} from 'vue-animation-counter';
 
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/components/custom-counter.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/components/custom-counter.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Counter' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Counter' });
 
     const code_arr = ref([]);
     const toggleCode = (name) => {

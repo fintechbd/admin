@@ -681,16 +681,17 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import '@/sass/apps/invoice-add.scss';
+import {onMounted, ref} from 'vue';
+import '@/sass/apps/invoice-add.scss';
 
-    //flatpickr
-    import flatPickr from 'vue-flatpickr-component';
-    import 'flatpickr/dist/flatpickr.css';
-    import '@/sass/forms/custom-flatpickr.css';
+//flatpickr
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+import '@/sass/forms/custom-flatpickr.css';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Invoice Add' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Invoice Add' });
 
     const items = ref([]);
     const selected_file = ref(null);

@@ -1274,14 +1274,15 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import {onMounted, ref} from 'vue';
 
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/tables/table-basic.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/tables/table-basic.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Tables' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Tables' });
 
     const code_arr = ref([]);
     const table_1 = ref([]);

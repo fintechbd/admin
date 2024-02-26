@@ -47,8 +47,9 @@
 </template>
 
 <script setup>
-    import '@/sass/authentication/auth-boxed.scss';
+import '@/sass/authentication/auth-boxed.scss';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Password Recovery Boxed' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Password Recovery Boxed' });
 </script>

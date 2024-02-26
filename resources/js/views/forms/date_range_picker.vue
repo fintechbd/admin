@@ -664,24 +664,25 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import {onMounted, ref} from 'vue';
 
-    import '@/sass/scrollspyNav.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import '@/sass/scrollspyNav.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    //normal range slider
-    import '@/sass/forms/bootstrap-slider.css';
+//normal range slider
+import '@/sass/forms/bootstrap-slider.css';
 
-    //flatpickr
-    import flatPickr from 'vue-flatpickr-component';
-    import 'flatpickr/dist/flatpickr.css';
-    import '@/sass/forms/custom-flatpickr.css';
+//flatpickr
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+import '@/sass/forms/custom-flatpickr.css';
 
-    // nouislider
-    import '@/sass/forms/custom-nouiSlider.css';
+// nouislider
+import '@/sass/forms/custom-nouiSlider.css';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Date & Range Picker' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Date & Range Picker' });
 
     const code_arr = ref([]);
     const date1 = ref('2020-09-04');

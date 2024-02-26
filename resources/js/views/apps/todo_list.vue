@@ -476,15 +476,16 @@
 </style>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import { quillEditor } from 'vue3-quill';
-    import 'vue3-quill/lib/vue3-quill.css';
-    import '@/sass/apps/todolist.scss';
+import {onMounted, ref} from 'vue';
+import {quillEditor} from 'vue3-quill';
+import 'vue3-quill/lib/vue3-quill.css';
+import '@/sass/apps/todolist.scss';
 
-    import '@/sass/components/custom-modal.scss';
+import '@/sass/components/custom-modal.scss';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Todo List' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Todo List' });
 
     const is_show_task_menu = ref(false);
     const params = ref({ task_id: null, title: '', description: '' });

@@ -630,8 +630,9 @@
 </template>
 
 <script setup>
-    import '@/sass/pages/helpdesk.scss';
+import '@/sass/pages/helpdesk.scss';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Helpdesk' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Helpdesk' });
 </script>

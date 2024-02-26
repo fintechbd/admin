@@ -1,5 +1,5 @@
 import store from './store';
-import { $themeConfig } from '@themeConfig';
+import {$themeConfig} from '@themeConfig';
 
 export default {
     init() {

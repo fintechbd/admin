@@ -262,14 +262,15 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import {onMounted, ref} from 'vue';
 
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/elements/tooltip.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/elements/tooltip.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Tooltips' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Tooltips' });
 
     const code_arr = ref([]);
 

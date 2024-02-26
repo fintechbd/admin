@@ -451,15 +451,16 @@
 </style>
 
 <script setup>
-    import { ref } from 'vue';
-    import '@/sass/scrollspyNav.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import {ref} from 'vue';
+import '@/sass/scrollspyNav.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import '@/sass/font-icons/fontawesome/css/regular.css';
-    import '@/sass/font-icons/fontawesome/css/fontawesome.css';
+import '@/sass/font-icons/fontawesome/css/regular.css';
+import '@/sass/font-icons/fontawesome/css/fontawesome.css';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Wizards' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Wizards' });
 
     const code_arr = ref([]);
     const toggleCode = (name) => {

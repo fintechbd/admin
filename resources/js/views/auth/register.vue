@@ -102,8 +102,9 @@
 </template>
 
 <script setup>
-    import '@/sass/authentication/auth.scss';
+import '@/sass/authentication/auth.scss';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Register Cover' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Register Cover' });
 </script>

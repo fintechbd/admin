@@ -1,13 +1,9 @@
-import { createApp } from 'vue';
+import {createApp} from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-const app = createApp(App);
-
 // bootstrap
 import * as bootstrap from 'bootstrap';
-window.bootstrap = bootstrap;
-
 // modals
 import '@/sass/components/custom-modal.scss';
 
@@ -16,13 +12,9 @@ import PerfectScrollbar from 'vue3-perfect-scrollbar';
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 
 //vue-meta
-import { createHead } from '@vueuse/head';
-const head = createHead();
-
+import {createHead} from '@vueuse/head';
 //Sweetalert
 import Swal from 'sweetalert2';
-window.Swal = Swal;
-
 // nouislider - later remove and add to page due to not working in page
 import VueNouislider from 'vue3-nouislider';
 import 'vue3-nouislider/dist/vue3-nouislider.css';
@@ -31,14 +23,12 @@ import 'vue3-nouislider/dist/vue3-nouislider.css';
 import Maska from 'maska';
 
 // smooth scroll
-import { registerScrollSpy } from 'vue3-scroll-spy';
-registerScrollSpy(app, { offset: 118 });
-
+import {registerScrollSpy} from 'vue3-scroll-spy';
 //vue-i18n
 import i18n from './i18n';
 
 // datatables
-import { ClientTable } from 'v-tables-3';
+import {ClientTable} from 'v-tables-3';
 
 // json to excel
 import vue3JsonExcel from 'vue3-json-excel';
@@ -49,6 +39,17 @@ import 'vue3-form-wizard/dist/style.css';
 
 // set default settings
 import appSetting from './app-setting';
+
+const app = createApp(App);
+
+window.bootstrap = bootstrap;
+
+const head = createHead();
+
+window.Swal = Swal;
+
+registerScrollSpy(app, { offset: 118 });
+
 window.$appSetting = appSetting;
 window.$appSetting.init();
 

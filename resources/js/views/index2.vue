@@ -881,13 +881,14 @@
     </div>
 </template>
 <script setup>
-    import '@/sass/widgets/widgets.scss';
-    import { computed, ref } from 'vue';
-    import { useStore } from 'vuex';
-    import ApexChart from 'vue3-apexcharts';
+import '@/sass/widgets/widgets.scss';
+import {computed, ref} from 'vue';
+import {useStore} from 'vuex';
+import ApexChart from 'vue3-apexcharts';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Widgets' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Widgets' });
 
     const store = useStore();
 

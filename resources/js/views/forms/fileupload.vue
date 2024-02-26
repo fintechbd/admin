@@ -168,15 +168,16 @@ new FileUploadWithPreview('myFirstImage', {
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import {onMounted, ref} from 'vue';
 
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/forms/file-upload-with-preview.min.css';
-    import highlight from '@/components/plugins/highlight.vue';
-    import FileUploadWithPreview from 'file-upload-with-preview';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/forms/file-upload-with-preview.min.css';
+import highlight from '@/components/plugins/highlight.vue';
+import FileUploadWithPreview from 'file-upload-with-preview';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'File Upload' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'File Upload' });
 
     const code_arr = ref([]);
 

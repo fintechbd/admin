@@ -369,9 +369,10 @@
 </template>
 
 <script setup>
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/elements/color_library.css';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/elements/color_library.css';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Color Library' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Color Library' });
 </script>

@@ -288,11 +288,12 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import '@/sass/apps/notes.scss';
+import {onMounted, ref} from 'vue';
+import '@/sass/apps/notes.scss';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Notes' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Notes' });
 
     let notesMailModal = ref(null);
     const params = ref({ id: null, title: '', description: '' });

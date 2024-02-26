@@ -659,13 +659,14 @@ toast.fire({
 </template>
 
 <script setup>
-    import { ref } from 'vue';
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/components/custom-sweetalert.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import {ref} from 'vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/components/custom-sweetalert.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Sweet Alert' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Sweet Alert' });
 
     const code_arr = ref([]);
     const toggleCode = (name) => {

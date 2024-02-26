@@ -464,13 +464,14 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/components/custom-list-group.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import {ref} from 'vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/components/custom-list-group.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'List Group' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'List Group' });
 
     const code_arr = ref([]);
     const chk_demo = ref([]);

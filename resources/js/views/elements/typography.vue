@@ -354,9 +354,10 @@
 </template>
 
 <script setup>
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/elements/custom-typography.css';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/elements/custom-typography.css';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Typography' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Typography' });
 </script>

@@ -186,21 +186,22 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import '@/sass/apps/calendar.scss';
+import {onMounted, ref} from 'vue';
+import '@/sass/apps/calendar.scss';
 
-    import FullCalendar from '@fullcalendar/vue3';
-    import dayGridPlugin from '@fullcalendar/daygrid';
-    import timeGridPlugin from '@fullcalendar/timegrid';
-    import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+import FullCalendar from '@fullcalendar/vue3';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin, {Draggable} from '@fullcalendar/interaction';
 
-    //flatpickr
-    import flatPickr from 'vue-flatpickr-component';
-    import 'flatpickr/dist/flatpickr.css';
-    import '@/sass/forms/custom-flatpickr.css';
+//flatpickr
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+import '@/sass/forms/custom-flatpickr.css';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Fullcalendar Drag and Drop Event' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Fullcalendar Drag and Drop Event' });
 
     const defaultParams = ref({ id: null, title: '', start: '', end: '', description: '', className: 'bg-primary' });
     const params = ref(JSON.parse(JSON.stringify(defaultParams.value)));

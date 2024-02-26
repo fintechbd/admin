@@ -1603,15 +1603,16 @@
 </style>
 
 <script setup>
-    import { ref } from 'vue';
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/drag-drop/drag-drop.css';
-    import { VueDraggableNext as draggable } from 'vue-draggable-next';
+import {ref} from 'vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/drag-drop/drag-drop.css';
+import {VueDraggableNext as draggable} from 'vue-draggable-next';
 
-    import highlight from '@/components/plugins/highlight.vue';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Drag & Drop' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Drag & Drop' });
 
     const code_arr = ref([]);
     const toggleCode = (name) => {

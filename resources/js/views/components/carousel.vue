@@ -586,13 +586,14 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
-    import '@/sass/scrollspyNav.scss';
-    import '@/sass/components/custom-carousel.scss';
-    import highlight from '@/components/plugins/highlight.vue';
+import {ref} from 'vue';
+import '@/sass/scrollspyNav.scss';
+import '@/sass/components/custom-carousel.scss';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Carousel' });
+import {useMeta} from '@/composables/use-meta';
+
+useMeta({ title: 'Carousel' });
 
     const code_arr = ref([]);
     const slide1 = ref(0);

@@ -4,14 +4,14 @@
     </div>
 </template>
 <script setup>
-    import { computed } from 'vue';
+import {computed} from 'vue';
 
-    import '@/sass/app.scss';
+import '@/sass/app.scss';
 
-    import { useMeta } from '@/composables/use-meta';
-    import { useStore } from 'vuex';
+import {useMeta} from '@/composables/use-meta';
+import {useStore} from 'vuex';
 
-    useMeta({ title: 'Sales Admin' });
+useMeta({ title: 'Sales Admin' });
 
     const store = useStore();
 
