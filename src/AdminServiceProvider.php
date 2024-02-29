@@ -16,7 +16,7 @@ class AdminServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/admin.php', 'fintech.admin'
+            __DIR__.'/../config/admin.php', 'fintech.admin'
         );
     }
 
@@ -26,21 +26,21 @@ class AdminServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/admin.php' => config_path('fintech/admin.php'),
+            __DIR__.'/../config/admin.php' => config_path('fintech/admin.php'),
         ]);
 
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
-        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'admin');
+        $this->loadTranslationsFrom(__DIR__.'/../lang', 'admin');
 
         $this->publishes([
-            __DIR__ . '/../lang' => $this->app->langPath('vendor/admin'),
+            __DIR__.'/../lang' => $this->app->langPath('vendor/admin'),
         ]);
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'admin');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/admin'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/admin'),
         ]);
 
         if ($this->app->runningInConsole()) {
