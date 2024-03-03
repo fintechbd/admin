@@ -62,9 +62,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Fintech\\Admin\\AdminServiceProvider",
-                "Fintech\\Admin\\RouteSrviceProvider",
-                "Fintech\\Admin\\RepositoryServiceProvider"
+                "Fintech\\Admin\\AdminServiceProvider"
             ],
             "aliases": {
                 "Admin": "Fintech\\Admin\\Facades\\Admin"
