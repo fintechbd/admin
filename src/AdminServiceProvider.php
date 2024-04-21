@@ -4,10 +4,13 @@ namespace Fintech\Admin;
 
 use Fintech\Admin\Commands\AdminCommand;
 use Fintech\Admin\Commands\InstallCommand;
+use Fintech\Core\Traits\RegisterPackageTrait;
 use Illuminate\Support\ServiceProvider;
 
 class AdminServiceProvider extends ServiceProvider
 {
+    use RegisterPackageTrait;
+
     /**
      * Register any application services.
      *
@@ -15,6 +18,8 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->packageCode = 'admin';
+
         $this->mergeConfigFrom(
             __DIR__.'/../config/admin.php', 'fintech.admin'
         );
@@ -28,6 +33,8 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->injectOnConfig();
+
         $this->publishes([
             __DIR__.'/../config/admin.php' => config_path('fintech/admin.php'),
         ]);
