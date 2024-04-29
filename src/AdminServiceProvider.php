@@ -24,8 +24,8 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__.'/../config/admin.php', 'fintech.admin'
         );
 
-        $this->app->register(RouteServiceProvider::class);
-        $this->app->register(RepositoryServiceProvider::class);
+        $this->app->register(\Fintech\Admin\Providers\RouteServiceProvider::class);
+        $this->app->register(\Fintech\Admin\Providers\RepositoryServiceProvider::class);
     }
 
     /**
