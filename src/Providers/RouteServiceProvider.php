@@ -29,7 +29,7 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::prefix("{$root_prefix}")
                 ->middleware('web')
-                ->group(__DIR__.'/../routes/web.php');
+                ->group(__DIR__.'/../../routes/web.php');
         });
     }
 
