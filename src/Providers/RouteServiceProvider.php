@@ -22,15 +22,15 @@ class RouteServiceProvider extends ServiceProvider
 
         $root_prefix = Config::get('fintech.admin.root_prefix', '');
 
-//        $this->routes(function () use (&$root_prefix) {
-////            Route::prefix("{$root_prefix}api")
-////                ->middleware('api')
-////                ->group(__DIR__.'/../../routes/api.php');
-//
-//            Route::prefix("{$root_prefix}")
-//                ->middleware('web')
-//                ->group(__DIR__.'/../../routes/web.php');
-//        });
+        $this->routes(function () use (&$root_prefix) {
+            Route::prefix("{$root_prefix}api")
+                ->middleware('api')
+                ->group(__DIR__ . '/../../routes/api.php');
+
+            Route::prefix("{$root_prefix}")
+                ->middleware('web')
+                ->group(__DIR__ . '/../../routes/web.php');
+        });
     }
 
     /**
