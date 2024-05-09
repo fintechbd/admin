@@ -4,6 +4,8 @@ namespace Fintech\Admin;
 
 use Fintech\Admin\Commands\AdminCommand;
 use Fintech\Admin\Commands\InstallCommand;
+use Fintech\Admin\Providers\RepositoryServiceProvider;
+use Fintech\Admin\Providers\RouteServiceProvider;
 use Fintech\Core\Traits\RegisterPackageTrait;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,11 +23,11 @@ class AdminServiceProvider extends ServiceProvider
         $this->packageCode = 'admin';
 
         $this->mergeConfigFrom(
-            __DIR__.'/../config/admin.php', 'fintech.admin'
+            __DIR__ . '/../config/admin.php', 'fintech.admin'
         );
 
-        $this->app->register(\Fintech\Admin\Providers\RouteServiceProvider::class);
-        $this->app->register(\Fintech\Admin\Providers\RepositoryServiceProvider::class);
+        $this->app->register(RouteServiceProvider::class);
+        $this->app->register(RepositoryServiceProvider::class);
     }
 
     /**
@@ -36,21 +38,21 @@ class AdminServiceProvider extends ServiceProvider
         $this->injectOnConfig();
 
         $this->publishes([
-            __DIR__.'/../config/admin.php' => config_path('fintech/admin.php'),
+            __DIR__ . '/../config/admin.php' => config_path('fintech/admin.php'),
         ]);
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
-        $this->loadTranslationsFrom(__DIR__.'/../lang', 'admin');
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'admin');
 
         $this->publishes([
-            __DIR__.'/../lang' => $this->app->langPath('vendor/admin'),
+            __DIR__ . '/../lang' => $this->app->langPath('vendor/admin'),
         ]);
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'admin');
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/admin'),
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/admin'),
         ]);
 
         if ($this->app->runningInConsole()) {
