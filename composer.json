@@ -19,7 +19,7 @@
         "php": "^8.2",
         "fintech/auth": "*",
         "fintech/core": "*",
-        "illuminate/contracts": "^11.0",
+        "illuminate/contracts": "^12.0||^11.0",
         "inertiajs/inertia-laravel": "^0.6.11",
         "tightenco/ziggy": "^1.8"
     },
