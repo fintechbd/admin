@@ -23,7 +23,7 @@ jobs:
       - run: npm run build
 
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           push_options: '--force'
           commit_message: "Compile and build asset for production"
